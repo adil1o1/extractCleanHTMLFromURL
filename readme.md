@@ -59,7 +59,7 @@ Only:
 - Clean HTML is saved as: `simpleHTMLText.html`
 - It's also automatically copied to your clipboard
 - Paste it directly into:
-  - Elementor **Text Editor**https://github.com/adil1o1/extractCleanHTMLFromURL/edit/main/readme.md#L59C43
+  - Elementor **Text Editor**
   - **Icon List**
   - Or even a **Custom HTML widget**
 
