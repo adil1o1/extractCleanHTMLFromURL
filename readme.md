@@ -71,16 +71,6 @@ You’re copying content from an old WordPress blog or school page into a modern
 
 ---
 
-## 🔗 Example URL
-
-```python
-url = "https://academyatthelakes.org/25-26-summer-checklist/"
-```
-
-Replace it with any WordPress or HTML page URL you want to clean.
-
----
-
 ## ✅ You're Done!
 
 Run the script. Get Elementor-ready HTML in seconds. No more editing messy code manually.
