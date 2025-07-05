@@ -56,10 +56,10 @@ Only:
 
 ## 📁 Output
 
-- Clean HTML is saved as: `lightweight.html`
+- Clean HTML is saved as: `simpleHTMLText.html`
 - It's also automatically copied to your clipboard
 - Paste it directly into:
-  - Elementor **Text Editor**
+  - Elementor **Text Editor**https://github.com/adil1o1/extractCleanHTMLFromURL/edit/main/readme.md#L59C43
   - **Icon List**
   - Or even a **Custom HTML widget**
 
