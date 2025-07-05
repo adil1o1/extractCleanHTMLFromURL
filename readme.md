@@ -1,16 +1,18 @@
 # 🧹 Extract Clean HTML From URL For Elementor
 
-This Python script helps you extract and clean the main content from a WordPress page or blog post. It's specifically designed to remove bloated HTML, inline styles, and unnecessary tags — making the content Elementor-ready.
+This Python script helps you extract and clean HTML content from any webpage — especially WordPress sites built with **Elementor**. It removes all bloated wrappers, headers, footers, inline styles, and unnecessary tags, giving you clean, paste-ready HTML for Elementor widgets.
 
 ---
 
 ## ✨ What It Does
 
-- ✅ Fetches a live WordPress page (using its URL)
-- ✅ Finds the main content area (`.entry-content`, `<article>`, or `<main>`)
-- ✅ Cleans the HTML to keep only essential text-based tags
-- ✅ Keeps only the `href` attribute for links
-- ✅ Outputs a lightweight, readable HTML file
+- ✅ Fetches a live page using its URL
+- ✅ Strips out `<header>` and `<footer>` content entirely
+- ✅ Extracts only what’s inside `<body>`
+- ✅ Removes all tags except the essential text-based ones
+- ✅ Keeps only the `href` attribute on `<a>` tags
+- ✅ Saves the cleaned output as `lightweight.html`
+- ✅ Copies the HTML directly to your clipboard
 
 ---
 
@@ -18,12 +20,13 @@ This Python script helps you extract and clean the main content from a WordPress
 
 Install using pip:
 
-```
-pip install requests beautifulsoup4
+```bash
+pip install requests beautifulsoup4 pyperclip
 ```
 
-- **`requests`** – For making HTTP requests to fetch the page  
-- **`beautifulsoup4`** – For parsing and cleaning the HTML content
+- `requests` – For making HTTP requests  
+- `beautifulsoup4` – For parsing and cleaning HTML  
+- `pyperclip` – For copying cleaned HTML to your clipboard
 
 ---
 
@@ -31,44 +34,55 @@ pip install requests beautifulsoup4
 
 ### ✅ Allowed Tags
 
-Only the following HTML tags are preserved:
+Only the following tags are preserved:
 
-```
-allowed_tags = ['p', 'strong', 'b', 'i', 'em', 'a', 'ul', 'ol', 'li', 'br']
+```python
+allowed_tags = ['a', 'br', 'p', 'ul', 'ol', 'li', 'b', 'strong', 'i', 'em', 'u']
 ```
 
-> Any tag not in this list is removed, but its inner text content remains.
+All other HTML tags are removed, but their inner text is retained.
 
 ### ✅ Allowed Attributes
 
-- Only `href` is allowed on `<a>` tags.
-- All other attributes (like `class`, `style`, `id`) are stripped.
+Only:
+
+```python
+<a href="...">Link</a>
+```
+
+- All other attributes (`class`, `id`, `style`, etc.) are stripped.
 
 ---
 
 ## 📁 Output
 
-- The cleaned HTML is saved to a file: `lightweight.html`
-- You can safely copy-paste this into **Elementor's Text Editor**, **Icon List**, or **HTML widget**
+- Clean HTML is saved as: `lightweight.html`
+- It's also automatically copied to your clipboard
+- Paste it directly into:
+  - Elementor **Text Editor**
+  - **Icon List**
+  - Or even a **Custom HTML widget**
 
 ---
 
 ## 💡 Example Use Case
 
-> You’re migrating content from an old WordPress blog to a new Elementor-based site and want to keep only the essential, clean HTML — without messy inline styles or bloated wrappers.
+You’re copying content from an old WordPress blog or school page into a modern Elementor-based layout. This script strips out all unwanted styling, containers, and scripts — keeping only clean content you can paste and style in Elementor.
 
 ---
 
 ## 🔗 Example URL
 
-```
-url = "https://academyatthelakes.org/parent-portal/25-26-summer-checklist/"
+```python
+url = "https://academyatthelakes.org/25-26-summer-checklist/"
 ```
 
-Replace with any WordPress content page URL.
+Replace it with any WordPress or HTML page URL you want to clean.
 
 ---
 
-## ✅ Done!
+## ✅ You're Done!
 
-Run the script and get Elementor-ready HTML in seconds. No extra formatting needed.
+Run the script. Get Elementor-ready HTML in seconds. No more editing messy code manually.
+
+---
